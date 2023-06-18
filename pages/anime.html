@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kitsu Anime API Example</title>
+  <link rel="stylesheet" type="text/css" href="/styles/anime.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="button">
+          VISKONTI
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./people.html">Authors</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./anime.html">Animes</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form id="searchForm" class="form-inline my-2 my-lg-0">
+            <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
+  <div class="curtain">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+        <img src="/img/logo.png" alt="Logo" height="200">
+      </div>
+      <h1 class="mt-4" id="top">Anime List</h1>
+      <div id="anime-container" class="anime-container"></div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul id="pagination" class="pagination justify-content-center">
+        <li class="page-item ">
+          <button class="page-link" id="prev">Previous</button>
+        </li>
+        <li>
+          <button class="page-link" id="nxt">Next</button>
+        </li>    
+      </ul>
+    </nav>
+  </div>
+
+  <footer>
+    <P>All the manga on this site are the property of the publisher. We are just trying to translate them into other languages so that you can more easily track them. Do not try to make a profit from these. If you like any of the comics you get here, consider buying them from the publisher, if available. You can contact us at: neosadava@gmail.com <a href="https://myanimelist.net/">Visit the AnimeList(The Anime Database) Website</a></P>
+</footer>
+
+  <script src="/function/anime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

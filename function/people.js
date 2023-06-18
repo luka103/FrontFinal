@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const peoplePerPage = 20;
   let currentPage = 1;
   let totalPeople = 0;
+  const topp = document.getElementById('top');
 
   const fetchPeople = (page) => {
     const offset = (page - 1) * peoplePerPage;
@@ -103,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPage > 1) {
       currentPage--;
       fetchPeople(currentPage);
+      const targetSection = topp;
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 
@@ -112,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPage < totalPages) {
       currentPage++;
       fetchPeople(currentPage);
+      const targetSection = topp;
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   });
 

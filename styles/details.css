@@ -1,8 +1,19 @@
-body {
+html, body {
+  margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  margin: 20px;
-  background-color: #f9f9f9;
-  color: #555555;
+  background-image: url("../img/mangaBack.png") !important;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.mt-4 {
+  margin-top: 1.5rem!important;
+}
+.curtain {
+  background-color: rgba(0, 0, 0, 0.37);
 }
 
 h1 {
@@ -56,6 +67,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 15px;
   color: #333333;
+  text-align: center;
 }
 
 .manga-rating,
@@ -194,4 +206,10 @@ h1 {
   left: -9%;
   width: 150%;
   height: 300%;
+}
+#top {
+  color: rgb(248, 201, 12);
+  font-weight: bold;
+  font-family: 'Sedgwick Ave Display', cursive !important;
+  font-size: auto;
 }

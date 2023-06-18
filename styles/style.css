@@ -1,0 +1,141 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#manga-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.manga-item {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #282828;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.manga-item:hover {
+  background-color: #a418db;
+  transform: scale(1.1);
+}
+
+.manga-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.manga-cover {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.manga-description {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.manga-read-more {
+  color: #a418db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.manga-read-more:hover {
+  color: #8a2be2;
+}
+
+
+@media (max-width: 768px) {
+  #manga-list {
+    justify-content: flex-start;
+  }
+
+  .manga-item {
+    width: 100%;
+  }
+}
+.button {
+  border: none;
+  font-size: 17px;
+  padding: 1em 2em;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: bold;
+  background: #caf0f8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #333,
+             2px 2px 200px #ffba08 inset;
+  color: #000000;
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+.button:hover {
+  box-shadow: 2px 2px 0 #333,
+             2px 2px 200px #003566 inset;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  left: -41%;
+  width: 150%;
+  height: 300%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 #333,
+             0 0 0 8px #d00000 inset,
+             0 0 0 16px #dc2f02 inset,
+             0 0 0 24px #e85d04 inset,
+             0 0 0 32px #f48c06 inset,
+             0 0 0 40px #faa307 inset;
+  z-index: -1;
+  transition: .2s;
+}
+
+.button:active::before {
+  opacity: .001;
+  box-shadow: 2px 2px 200px #03045e inset;
+}
+
+.button:hover::before {
+  box-shadow: 2px 2px 0 #333,
+             0 0 0 8px #90e0ef inset,
+             0 0 0 16px #48cae4 inset,
+             0 0 0 24px #00b4d8 inset,
+             0 0 0 32px #0096c7 inset,
+             0 0 0 40px #0077b6 inset;
+  left: -9%;
+  width: 150%;
+  height: 300%;
+}

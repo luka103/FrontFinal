@@ -1,0 +1,197 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #555555;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+#manga-details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.manga-cover-details {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.manga-description-details {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.manga-details-info {
+  margin-bottom: 15px;
+}
+
+.manga-details-info p {
+  margin: 5px 0;
+}
+
+.manga-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.manga-rating,
+.manga-dates,
+.manga-popularity-rank,
+.manga-rating-rank,
+.manga-age-rating,
+.manga-volume-count {
+  font-size: 14px;
+  color: #777777;
+}
+
+.manga-rating span,
+.manga-dates span,
+.manga-popularity-rank span,
+.manga-rating-rank span,
+.manga-age-rating span,
+.manga-volume-count span {
+  font-weight: bold;
+  color: #333333;
+}
+
+.button1-container {
+  text-align: center;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #ff6f69;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #ff3b3f;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  #manga-details {
+    padding: 20px;
+  }
+
+  .manga-cover-details {
+    margin-bottom: 15px;
+  }
+
+  .manga-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .manga-rating,
+  .manga-dates,
+  .manga-popularity-rank,
+  .manga-rating-rank,
+  .manga-age-rating,
+  .manga-volume-count {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    margin-top: 15px;
+  }
+}
+.button {
+  border: none;
+  font-size: 17px;
+  padding: 1em 2em;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 1;
+  background: #caf0f8;
+  font-weight: bold;;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #333,
+             2px 2px 200px #ffba08 inset;
+  color: #000000;
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+.button:hover {
+  box-shadow: 2px 2px 0 #333,
+             2px 2px 200px #003566 inset;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  left: -41%;
+  width: 150%;
+  height: 300%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 #333,
+             0 0 0 8px #d00000 inset,
+             0 0 0 16px #dc2f02 inset,
+             0 0 0 24px #e85d04 inset,
+             0 0 0 32px #f48c06 inset,
+             0 0 0 40px #faa307 inset;
+  z-index: -1;
+  transition: .2s;
+}
+
+.button:active::before {
+  opacity: .001;
+  box-shadow: 2px 2px 200px #03045e inset;
+}
+
+.button:hover::before {
+  box-shadow: 2px 2px 0 #333,
+             0 0 0 8px #90e0ef inset,
+             0 0 0 16px #48cae4 inset,
+             0 0 0 24px #00b4d8 inset,
+             0 0 0 32px #0096c7 inset,
+             0 0 0 40px #0077b6 inset;
+  left: -9%;
+  width: 150%;
+  height: 300%;
+}

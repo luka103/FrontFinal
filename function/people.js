@@ -123,3 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start fetching the people
   fetchPeople(currentPage);
 });
+
+
+

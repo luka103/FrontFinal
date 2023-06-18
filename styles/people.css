@@ -1,7 +1,16 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 20px;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("../img/mangaBack.png") !important;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.curtain {
+  background-color: rgba(0, 0, 0, 0.37);
 }
 
 h1 {
@@ -186,4 +195,35 @@ h1 {
   width: 150%;
   height: 300%;
 }
+#top {
+  color: rgb(248, 201, 12);
+  font-weight: bold;
+  font-family: 'Sedgwick Ave Display', cursive !important;
+  font-size: auto;
+}
+footer {
+  background-color: #222;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
 
+footer p {
+  color: #eee;
+  font-size: 16px;
+  width: 60%;
+  margin: 0;
+}
+
+footer a{
+  color: #eee;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+footer a:hover{
+  color: #ff0000;
+}

@@ -52,12 +52,20 @@ function fetchMangas() {
             id: mangaId,
             name: title,
             cover: coverImage,
-            // Add other manga details here
+            description: manga.attributes.description,
+            rating: manga.attributes.averageRating || 'Not available',
+            startDate: manga.attributes.startDate || 'Ongoing',
+            endDate: manga.attributes.endDate || 'Ongoing',
+            popularityRank: manga.attributes.popularityRank || 'Not available',
+            ratingRank: manga.attributes.ratingRank || 'Not available',
+            ageRating: manga.attributes.ageRating || 'Not available',
+            volumeCount: manga.attributes.volumeCount || 'Not available'
           }));
-    
+        
           // Redirect to the details.html page
           window.location.href = 'details.html';
         });
+        
 
         mangaList.appendChild(mangaItem);
 

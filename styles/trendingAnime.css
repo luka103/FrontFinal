@@ -6,11 +6,6 @@ body {
     background-image: url("../img/trendingBack.jpg") !important;
     color: white;
   }
-#anime-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .curtain {
     background-color: rgba(0, 0, 0, 0.37);
   }
@@ -23,7 +18,14 @@ body {
     text-transform: uppercase;
   }
   
-  .anime-card {
+  #anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .anime {
     width: 350px;
     height: auto;
     margin: 10px;
@@ -41,32 +43,30 @@ body {
     align-items: center;
   }
   
-  .anime-card:hover {
+  .anime:hover {
     transform: scale(1.1);
     background-color: #a418db;
   }
   
-  .anime-image {
+  .anime h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #fffdfd;
+  }
+  
+  .anime img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
     border-radius: 5px;
     object-fit: cover;
   }
-  
-  .anime-title {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff8f8;
-    font-family: 'Poppins', Arial, sans-serif;
-  }
   @media (max-width: 768px) {
-    #anime-container {
+    #anime-list {
       justify-content: flex-start;
     }
   
-    .anime-card {
+    .anime {
       width: 100%;
     }
   }
@@ -117,10 +117,6 @@ body {
     width: 150%;
     height: 300%;
   }
-  ul {
-    margin-bottom: 0px !important;
-    padding: 16px;
-  }
   #top {
     color: rgb(248, 201, 12);
     font-weight: bold;
@@ -153,4 +149,3 @@ body {
   footer a:hover{
     color: #ff0000;
   }
-  

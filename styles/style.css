@@ -5,6 +5,7 @@ body {
   margin: 20px;
   background-image: url("../img/homeBackground.jpg") !important;
   color: white;
+  background-size: cover;
 }
 
 .navbar {

@@ -7,6 +7,9 @@ const nxt = document.getElementById('nxt');
 const topp = document.getElementById('top');
 const searchForm = document.getElementById('searchForm');
 const searchInput = document.getElementById('searchInput');
+const pageElement = document.getElementById('page');
+const pageContainer = document.getElementById('pageContainer');
+
 
 function fetchMangas() {
   const offset = (page - 1) * perPage;
@@ -87,9 +90,11 @@ function fetchMangas() {
         rev.disabled = true;
       }
     })
+
     .catch(error => {
       console.error('Error:', error);
     });
+    pageElement.textContent = page;
 }
 
 rev.addEventListener('click', () => {

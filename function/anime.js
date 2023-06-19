@@ -4,6 +4,9 @@ let totalAnimeCount = 0; // Total number of anime available
 const rev = document.getElementById('prev');
 const nxt = document.getElementById('nxt');
 const topp = document.getElementById('top');
+const currentPageElement = document.getElementById('currentPage');
+const currentPageContainer = document.getElementById('currentPageContainer');
+
 
 document.addEventListener('DOMContentLoaded', function() {
   fetchAnimeData();
@@ -59,6 +62,7 @@ function fetchAnimeData() {
     .catch(error => {
       console.error('Error:', error);
     });
+    currentPageElement.textContent = currentPage;
 }
 
 function createAnimeCard(anime) {
@@ -84,21 +88,21 @@ function createAnimeCard(anime) {
 }
 
 
-  rev.addEventListener('click', () => {
-    if (currentPage > 1) {
-      currentPage--;
-      fetchAnimeData();
-      const targetSection = topp;
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-  
-  nxt.addEventListener('click', () => {
-    currentPage++;
+rev.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
     fetchAnimeData();
     const targetSection = topp;
     targetSection.scrollIntoView({ behavior: "smooth" });
-  });
+  }
+});
+
+nxt.addEventListener('click', () => {
+  currentPage++;
+  fetchAnimeData();
+  const targetSection = topp;
+  targetSection.scrollIntoView({ behavior: "smooth" });
+});
   
   
 

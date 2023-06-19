@@ -62,22 +62,27 @@ function fetchAnimeData() {
 }
 
 function createAnimeCard(anime) {
-    const animeCard = document.createElement('div');
-    animeCard.className = 'anime-card';
-  
-    const imageElement = document.createElement('img');
-    imageElement.className = 'anime-image';
-    imageElement.src = anime.attributes.posterImage.medium;
-  
-    const titleElement = document.createElement('h2');
-    titleElement.className = 'anime-title';
-    titleElement.textContent = anime.attributes.canonicalTitle;
-  
-    animeCard.appendChild(imageElement);
-    animeCard.appendChild(titleElement);
-  
-    return animeCard;
-  }
+  const animeCard = document.createElement('div');
+  animeCard.className = 'anime-card';
+
+  const animeLink = document.createElement('a');
+  animeLink.href = `animeDetails.html?id=${anime.id}`; // Pass the anime ID as a query parameter
+
+  const imageElement = document.createElement('img');
+  imageElement.className = 'anime-image';
+  imageElement.src = anime.attributes.posterImage.medium;
+
+  const titleElement = document.createElement('h2');
+  titleElement.className = 'anime-title';
+  titleElement.textContent = anime.attributes.canonicalTitle;
+
+  animeLink.appendChild(imageElement);
+  animeLink.appendChild(titleElement);
+  animeCard.appendChild(animeLink);
+
+  return animeCard;
+}
+
 
   rev.addEventListener('click', () => {
     if (currentPage > 1) {

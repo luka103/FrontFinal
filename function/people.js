@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentPage = 1;
   let totalPeople = 0;
   const topp = document.getElementById('top');
-
+;
+  
   const fetchPeople = (page) => {
     const offset = (page - 1) * peoplePerPage;
     const url = `https://kitsu.io/api/edge/people?page[limit]=${peoplePerPage}&page[offset]=${offset}`;
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             readMoreButton.textContent = 'Read More';
 
             readMoreButton.addEventListener('click', () => {
+              
               description.classList.toggle('expanded');
               if (description.classList.contains('expanded')) {
                 description.textContent = fullDescription;
@@ -66,6 +68,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
             descriptionContainer.appendChild(readMoreButton);
           }
+
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Bootstrap scrollspy
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+              target: '#navbarSupportedContent'
+            });
+        
+            // Smooth scrolling
+            var scroll = new SmoothScroll('a[href*="#"]');
+          });
 
           card.appendChild(image);
           card.appendChild(name);

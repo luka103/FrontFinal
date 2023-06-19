@@ -17,6 +17,15 @@ function fetchMangas() {
     const searchQuery = searchInput.value.trim();
     fetchUrl += `&filter[text]=${searchQuery}`;
   }
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap scrollspy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbarSupportedContent'
+    });
+
+    // Smooth scrolling
+    var scroll = new SmoothScroll('a[href*="#"]');
+  });
 
   fetch(fetchUrl)
     .then(response => response.json())

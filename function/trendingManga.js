@@ -35,3 +35,13 @@ fetch('https://kitsu.io/api/edge/trending/manga', {
     });
   })
   .catch(error => console.error(error));
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap scrollspy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbarSupportedContent'
+    });
+
+    // Smooth scrolling
+    var scroll = new SmoothScroll('a[href*="#"]');
+  });

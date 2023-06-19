@@ -32,3 +32,13 @@ async function getTrendingAnime() {
     console.log("Error:", error.message);
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Bootstrap scrollspy
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbarSupportedContent'
+  });
+
+  // Smooth scrolling
+  var scroll = new SmoothScroll('a[href*="#"]');
+});

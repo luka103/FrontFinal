@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const mangaDetailsElement = document.getElementById('manga-details');
 
   const selectedManga = JSON.parse(localStorage.getItem('selectedManga'));
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap scrollspy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbarSupportedContent'
+    });
 
+    // Smooth scrolling
+    var scroll = new SmoothScroll('a[href*="#"]');
+  });
   if (selectedManga) {
     const mangaName = document.createElement('h2');
     mangaName.classList.add('manga-name');

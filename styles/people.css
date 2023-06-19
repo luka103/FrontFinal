@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url("../img/mangaBack.png") !important;
+  background-image: url("../img/authors.jpg") !important;
 }
 
 .navbar {
@@ -195,6 +195,7 @@ h1 {
   width: 150%;
   height: 300%;
 }
+
 #top {
   color: rgb(248, 201, 12);
   font-weight: bold;

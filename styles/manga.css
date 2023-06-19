@@ -6,10 +6,10 @@ body {
     background-image: url("../img/mangaBack.png") !important;
     color: white;
   }
-  
   .curtain {
     background-color: rgba(0, 0, 0, 0.37);
   }
+  
   h1 {
     text-align: center;
     color: white;
@@ -19,13 +19,13 @@ body {
     text-transform: uppercase;
   }
   
-  #mangaList {
+  #manga-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .mangaItem {
+  .manga-item {
     width: 350px;
     height: auto;
     margin: 10px;
@@ -43,12 +43,19 @@ body {
     align-items: center;
   }
   
-  .mangaItem:hover {
+  .manga-item:hover {
+    background-color: #a418db;
     transform: scale(1.1);
-    background-color: #636363;
   }
   
-  .mangaItem img {
+  .manga-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 18px;
+  }
+  
+  .manga-cover {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
@@ -56,21 +63,33 @@ body {
     object-fit: cover;
   }
   
-  .mangaItem p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 16px;
-    color: #fffefe;
+  .manga-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
   }
+  
+  .manga-read-more {
+    color: #a418db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .manga-read-more:hover {
+    color: #8a2be2;
+  }
+  
   @media (max-width: 768px) {
-    #mangaList {
+    #manga-list {
       justify-content: flex-start;
     }
   
-    .mangaItem {
+    .manga-item {
       width: 100%;
     }
   }
+  
   .button {
     border: none;
     font-size: 17px;
@@ -118,6 +137,10 @@ body {
     width: 150%;
     height: 300%;
   }
+  ul {
+    margin-bottom: 0px !important;
+    padding: 16px;
+  }
   #top {
     color: rgb(248, 201, 12);
     font-weight: bold;
@@ -150,3 +173,4 @@ body {
   footer a:hover{
     color: #ff0000;
   }
+  

@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const backButton1 = document.querySelector('.button1');
 
   backButton.addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'manga.html';
   });
   backButton1.addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'manga.html';
   });
 });

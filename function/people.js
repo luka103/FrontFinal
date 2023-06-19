@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image.alt = person.attributes.name;
             image.style.objectFit = 'contain';
           } else {
-            image.src = '/img/missing.png'; // Replace with the relative path to your default image
+            image.src = '../img/missing.png'; // Replace with the relative path to your default image
             image.alt = 'Default Image';
           }
 

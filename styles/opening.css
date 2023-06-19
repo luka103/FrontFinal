@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/backgroundMusic.jpg') !important;
+}
+
+
+.music-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.music-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.music-item:hover {
+  transform: translateY(-5px);
+}
+
+.music-item iframe {
+  border: none;
+}
+
+.music {
+  padding: 10px;
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 14px;
+}
+
+.music a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.music a:hover {
+  color: #333;
+}
+
+.music-info {
+  padding: 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+  .music-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .music-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .music-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+}
+#top {
+  color: rgb(248, 201, 12);
+  font-weight: bold;
+  font-family: 'Sedgwick Ave Display', cursive !important;
+  font-size: auto;
+}
+footer {
+  background-color: #222;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+footer p {
+  color: #eee;
+  font-size: 16px;
+  width: 60%;
+  margin: 0;
+}
+
+footer a{
+  color: #eee;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+footer a:hover{
+  color: #ff0000;
+}
+.button {
+  border: none;
+  font-size: 17px;
+  padding: 1em 2em;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: bold;
+  background: #caf0f8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #333, 2px 2px 200px #ffba08 inset;
+  color: #000000;
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+.button:hover {
+  box-shadow: 2px 2px 0 #333, 2px 2px 200px #003566 inset;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  left: -41%;
+  width: 150%;
+  height: 300%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 #333, 0 0 0 8px #d00000 inset, 0 0 0 16px #dc2f02 inset, 0 0 0 24px #e85d04 inset, 0 0 0 32px #f48c06 inset, 0 0 0 40px #faa307 inset;
+  z-index: -1;
+  transition: .2s;
+}
+
+.button:active::before {
+  opacity: .001;
+  box-shadow: 2px 2px 200px #03045e inset;
+}
+
+.button:hover::before {
+  box-shadow: 2px 2px 0 #333, 0 0 0 8px #90e0ef inset, 0 0 0 16px #48cae4 inset, 0 0 0 24px #00b4d8 inset, 0 0 0 32px #0096c7 inset, 0 0 0 40px #0077b6 inset;
+  left: -9%;
+  width: 150%;
+  height: 300%;
+}

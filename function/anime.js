@@ -21,6 +21,24 @@ document.addEventListener('DOMContentLoaded', function() {
       searchAnime(searchQuery);
     }
   });
+  const filterForm = document.getElementById('filterForm');
+  const filterInput = document.getElementById('filterInput');
+  const filterButton = document.getElementById('filterButton');
+  filterButton.addEventListener('click', filterAnime);
+  const resetButton = document.getElementById('resetButton');
+
+  filterButton.addEventListener('click', function() {
+    const filterQuery = filterInput.value.trim();
+    if (filterQuery !== '') {
+      filterAnime(filterQuery);
+    }
+  });
+
+  resetButton.addEventListener('click', function() {
+    filterInput.value = '';
+    fetchAnimeData();
+  });
+  
 });
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize Bootstrap scrollspy
@@ -128,6 +146,44 @@ function searchAnime(query) {
     })
     .catch(error => console.error('Error:', error));
 }
+
+function filterAnime() {
+  const filterSelect = document.getElementById('filterSelect');
+  const filterCriteria = filterSelect.value;
+  const filterValue = document.getElementById('filterInput').value.trim();
+
+  let url = `https://kitsu.io/api/edge/anime?`;
+
+  if (filterCriteria === 'subtype') {
+    url += `filter[subtype]=${encodeURIComponent(filterValue)}`;
+  } else if (filterCriteria === 'title') {
+    url += `filter[text]=${encodeURIComponent(filterValue)}`;
+  } else if (filterCriteria === 'ageRating') {
+    url += `filter[ageRating]=${encodeURIComponent(filterValue)}`;
+  }
+
+  url += `&page[limit]=${animePerPage}&page[offset]=0`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      totalAnimeCount = data.meta.count;
+      const animeContainer = document.getElementById('anime-container');
+      animeContainer.innerHTML = ''; // Clear existing anime cards
+
+      data.data.forEach(anime => {
+        const animeCard = createAnimeCard(anime);
+        animeContainer.appendChild(animeCard);
+      });
+
+      // Remove Next Page button
+      const buttonContainer = document.getElementById('button-container');
+      buttonContainer.innerHTML = '';
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+
 
 
 

@@ -45,6 +45,24 @@
         <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       </form>
       <ul></ul>
+
+<form id="filterForm" class="form-inline my-2 my-lg-0">
+  <div class="input-group">
+    <select id="filterSelect" class="form-control">
+      <option value="" selected disabled>Choose criteria</option>
+      <option value="title">Title</option>
+      <option value="subtype">Subtype</option>
+      <option value="ageRating">Age Rating</option>
+    </select>
+    <input id="filterInput" class="form-control" type="search" placeholder="Filter" aria-label="Filter">
+    <div class="input-group-append">
+      <button id="filterButton" class="btn btn-outline-success mt-10" type="button">Filter</button>
+      <button id="resetButton" class="btn btn-outline-secondary" type="button">Reset</button>
+    </div>
+  </div>
+</form>
+
+                
     </div>
   </nav>
       

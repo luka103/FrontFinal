@@ -24,6 +24,12 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+  .mt-10{
+    margin-left: 10px;
+  }
+  .mt-5{
+    margin-right: 5x;
+  }
   
   .anime-card {
     width: 350px;

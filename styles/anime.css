@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +8,8 @@ body {
     margin: 20px;
     background-image: url("../img/trendingBack.jpg") !important;
     color: white;
+    display: flex;
+    flex-direction: column;
   }
 #anime-container {
     display: flex;
@@ -13,6 +18,7 @@ body {
   }
   .curtain {
     background-color: rgba(0, 0, 0, 0.37);
+    flex: 1;
   }
   h1 {
     text-align: center;
@@ -135,6 +141,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 10px;
+    flex-shrink: 0;
   }
   
   footer p {

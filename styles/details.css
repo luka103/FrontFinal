@@ -3,8 +3,12 @@ html, body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-image: url("../img/mangaBack.png") !important;
+  height: 100%;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 .navbar {
   margin-bottom: 0;
 }
@@ -14,6 +18,7 @@ html, body {
 }
 .curtain {
   background-color: rgba(0, 0, 0, 0.37);
+  flex: 1;
 }
 
 h1 {
@@ -221,6 +226,7 @@ footer {
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  flex-shrink: 0;
 }
 
 footer p {

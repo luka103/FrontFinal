@@ -3,6 +3,12 @@ html, body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-image: url("../img/trendingBack.jpg") !important;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
   }
   
   .navbar {
@@ -14,6 +20,8 @@ html, body {
   }
   .curtain {
     background-color: rgba(0, 0, 0, 0.37);
+    flex: 1;
+    flex-shrink: 0;
   }
   
   h1 {

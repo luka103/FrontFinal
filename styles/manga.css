@@ -5,9 +5,15 @@ body {
     margin: 20px;
     background-image: url("../img/mangaBack.png") !important;
     color: white;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
   }
   .curtain {
     background-color: rgba(0, 0, 0, 0.37);
+    flex: 1;
   }
   
   h1 {
@@ -155,6 +161,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 10px;
+    flex-shrink: 0;
   }
   
   footer p {

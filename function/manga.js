@@ -178,4 +178,10 @@ document.getElementById('resetButton').addEventListener('click', () => {
   filterMangas();
 });
 
+document.getElementById('resetButton').addEventListener('click', () => {
+  document.getElementById('filterInput').value = '';
+  fetchMangas(); // Call fetchMangas() after resetting the filter
+});
+
+
 fetchMangas();

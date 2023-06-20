@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
             // Smooth scrolling
             var scroll = new SmoothScroll('a[href*="#"]');
+            
           });
 
           card.appendChild(image);

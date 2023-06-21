@@ -6,6 +6,49 @@ body {
   background-image: url('../img/backgroundMusic.jpg') !important;
 }
 
+.social-media-boxes {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the icons to the right */
+  margin-right: 10px; /* Adds a small margin to the left side of the icons */
+  margin-top: 0 !important;
+}
+
+.social-media-boxes .box {
+  margin-right: 10px; /* Adds spacing between the social media icons */
+}
+.box {
+  padding: 0 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+}
+
+.box img {
+  width: 40px; /* Adjust the width as needed */
+  margin-bottom: 10px;
+}
+
+.niggas {
+  background-color: #0000009d;
+  border-radius: 100px;
+}
+#top {
+  color: rgb(248, 201, 12);
+  font-weight: bold;
+  font-family: 'Sedgwick Ave Display', cursive !important;
+  font-size: auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 
 .music-container {
   display: grid;

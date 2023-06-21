@@ -31,6 +31,7 @@ body {
     margin-right: 5x;
   }
   
+
   .anime-card {
     width: 350px;
     height: auto;
@@ -47,6 +48,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .niggas {
+    background-color: #0000009d;
+    border-radius: 100px;
+  }
+  .social-media-boxes {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the icons to the right */
+    margin-right: 10px; /* Adds a small margin to the left side of the icons */
+    margin-top: 0 !important;
+  }
+  
+  .social-media-boxes .box {
+    margin-right: 10px; /* Adds spacing between the social media icons */
+  }
+  .box {
+    padding: 0 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+  }
+  
+  .box img {
+    width: 40px; /* Adjust the width as needed */
+    margin-bottom: 10px;
   }
   
   .anime-card:hover {

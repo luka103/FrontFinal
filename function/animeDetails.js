@@ -1,6 +1,7 @@
 // Retrieve the anime ID from the query parameter
 const urlParams = new URLSearchParams(window.location.search);
 const animeId = urlParams.get('id');
+const page_name = document.getElementById("page_name");
 
 // Fetch the detailed information of the anime using the animeId
 const apiUrl = `https://kitsu.io/api/edge/anime/${animeId}`;
@@ -18,6 +19,7 @@ fetch(apiUrl)
 
     const animeTitle = document.createElement('h2');
     animeTitle.className = 'anime-title';
+    page_name.textContent = anime.attributes.canonicalTitle;
     animeTitle.textContent = anime.attributes.canonicalTitle;
     animeDetailsContainer.appendChild(animeTitle);
 

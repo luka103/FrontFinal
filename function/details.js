@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const mangaDetailsElement = document.getElementById('manga-details');
+  const page_name = document.getElementById("page_name");
+
 
   const selectedManga = JSON.parse(localStorage.getItem('selectedManga'));
   document.addEventListener('DOMContentLoaded', function() {
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (selectedManga) {
     const mangaName = document.createElement('h2');
     mangaName.classList.add('manga-name');
+    page_name.textContent = selectedManga.name;
+
     mangaName.textContent = selectedManga.name;
 
     const mangaCover = document.createElement('img');

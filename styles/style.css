@@ -173,6 +173,31 @@ footer a:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .picture-container {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+  }
+  
+  .picture-container p {
+    font-size: 24px;
+  }
+  
+  .picture-container img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .picture-container button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
 
 
 

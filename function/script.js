@@ -8,7 +8,19 @@
     "./quotes/kenshin.jpg",
     "./quotes/kenshin2.jpg",
     "./quotes/naruto2.jpg",
-    "./quotes/rin.webp"
+    "./quotes/rin.webp",
+    "./quotes/elite.jpg",
+    "./quotes/ghoul.jpg",
+    "./quotes/giyu.jpg",
+    "./quotes/goku.jpg",
+    "./quotes/itachi2.jpg",
+    "./quotes/ken.jpg",
+    "./quotes/luffy.jpg",
+    "./quotes/musashi.jpg",
+    "./quotes/samurai.jpg",
+    "./quotes/sabito.jpg"
+
+
   ];
 
   let imageIndex1 = 0;
@@ -16,7 +28,20 @@
     "./quotesSad/obito.webp",
     "./quotesSad/eren.webp",
     "./quotesSad/itachi.jpg",
-    "./quotesSad/kirito.jpg"
+    "./quotesSad/kirito.jpg",
+    "./quotesSad/bebop.jpg",
+    "./quotesSad/deep.jpg",
+    "./quotesSad/garou.jpg",
+    "./quotesSad/gate.jpg",
+    "./quotesSad/heren.jpg",
+    "./quotesSad/madara.jpg",
+    "./quotesSad/oreki.jpg",
+    "./quotesSad/pain.jpg",
+    "./quotesSad/rin.jpg",
+    "./quotesSad/sad.jpg",
+    "./quotesSad/violet.jpg"
+
+
   ];
 
 

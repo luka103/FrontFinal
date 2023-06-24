@@ -24,7 +24,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-  .niggas {
+  .darkness {
     background-color: #0000009d;
     border-radius: 100px;
   }
@@ -47,7 +47,7 @@ body {
   }
   
   .box img {
-    width: 40px; /* Adjust the width as needed */
+    width: 40px;
     margin-bottom: 10px;
   }
   .mt-10{
@@ -115,15 +115,7 @@ body {
     color: #8a2be2;
   }
   
-  @media (max-width: 768px) {
-    #manga-list {
-      justify-content: flex-start;
-    }
-  
-    .manga-item {
-      width: 100%;
-    }
-  }
+
   
   .button {
     border: none;
@@ -208,5 +200,15 @@ body {
   
   footer a:hover{
     color: #ff0000;
+  }
+
+  @media (max-width: 768px) {
+    #manga-list {
+      justify-content: flex-start;
+    }
+  
+    .manga-item {
+      width: 100%;
+    }
   }
   

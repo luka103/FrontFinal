@@ -1,5 +1,4 @@
-// JavaScript code
-// Fetch manga data from API
+
 fetch('https://kitsu.io/api/edge/trending/manga', {
   headers: {
     Accept: 'application/vnd.api+json',
@@ -8,10 +7,8 @@ fetch('https://kitsu.io/api/edge/trending/manga', {
 })
   .then(response => response.json())
   .then(data => {
-    // Extract trending manga from the response
     const trendingManga = data.data;
 
-    // Generate HTML for each manga item with title and image
     const mangaList = document.getElementById('mangaList');
     trendingManga.forEach((manga, index) => {
       const mangaItem = document.createElement('li');

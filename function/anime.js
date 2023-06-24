@@ -58,14 +58,13 @@ function fetchAnimeData() {
     .then(data => {
       totalAnimeCount = data.meta.count;
       const animeContainer = document.getElementById('anime-container');
-      animeContainer.innerHTML = ''; // Clear existing anime cards
+      animeContainer.innerHTML = '';
 
       data.data.forEach(anime => {
         const animeCard = createAnimeCard(anime);
         animeContainer.appendChild(animeCard);
       });
 
-      // Add Next Page button if more anime available
       if (hasNextPage()) {
         addNextPageButton();
       }

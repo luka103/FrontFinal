@@ -14,7 +14,6 @@ function fetchMangas() {
   const offset = (page - 1) * perPage;
   let fetchUrl = `${apiUrl}?page[limit]=${perPage}&page[offset]=${offset}`;
 
-  // If a search query is provided, include it in the fetch URL
   if (searchInput.value.trim() !== '') {
     const searchQuery = searchInput.value.trim();
     fetchUrl += `&filter[text]=${searchQuery}`;
@@ -33,7 +32,7 @@ function fetchMangas() {
       data.data.forEach(manga => {
         const title = manga.attributes.canonicalTitle;
         const coverImage = manga.attributes.posterImage.small;
-        const mangaId = manga.id; // Assuming "id" is the unique identifier for each manga
+        const mangaId = manga.id; 
 
         const mangaItem = document.createElement('div');
         mangaItem.classList.add('manga-item');

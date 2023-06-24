@@ -30,7 +30,7 @@ h1 {
   margin-bottom: 20px;
   color: #333333;
 }
-.niggas {
+.darkness {
   background-color: #0000009d;
   border-radius: 100px;
 }
@@ -53,7 +53,7 @@ h1 {
 }
 
 .box img {
-  width: 40px; /* Adjust the width as needed */
+  width: 40px;
   margin-bottom: 10px;
 }
 
@@ -151,34 +151,7 @@ h1 {
   }
 }
 
-@media (max-width: 768px) {
-  #manga-details {
-    padding: 20px;
-  }
 
-  .manga-cover-details {
-    margin-bottom: 15px;
-  }
-
-  .manga-name {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .manga-rating,
-  .manga-dates,
-  .manga-popularity-rank,
-  .manga-rating-rank,
-  .manga-age-rating,
-  .manga-volume-count {
-    font-size: 12px;
-  }
-
-  .button {
-    padding: 8px 16px;
-    margin-top: 15px;
-  }
-}
 .button {
   border: none;
   font-size: 17px;
@@ -270,4 +243,33 @@ footer a{
 
 footer a:hover{
   color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  #manga-details {
+    padding: 20px;
+  }
+
+  .manga-cover-details {
+    margin-bottom: 15px;
+  }
+
+  .manga-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .manga-rating,
+  .manga-dates,
+  .manga-popularity-rank,
+  .manga-rating-rank,
+  .manga-age-rating,
+  .manga-volume-count {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    margin-top: 15px;
+  }
 }

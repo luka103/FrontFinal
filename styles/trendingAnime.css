@@ -17,7 +17,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-  .niggas {
+  .darkness {
     background-color: #0000009d;
     border-radius: 100px;
   }
@@ -40,7 +40,7 @@ body {
   }
   
   .box img {
-    width: 40px; /* Adjust the width as needed */
+    width: 40px;
     margin-bottom: 10px;
   }
   #anime-list {
@@ -86,15 +86,7 @@ body {
     border-radius: 5px;
     object-fit: cover;
   }
-  @media (max-width: 768px) {
-    #anime-list {
-      justify-content: flex-start;
-    }
-  
-    .anime {
-      width: 100%;
-    }
-  }
+
   .button {
     border: none;
     font-size: 17px;
@@ -173,4 +165,13 @@ body {
   
   footer a:hover{
     color: #ff0000;
+  }
+  @media (max-width: 768px) {
+    #anime-list {
+      justify-content: flex-start;
+    }
+  
+    .anime {
+      width: 100%;
+    }
   }

@@ -19,8 +19,6 @@
     "./quotes/musashi.jpg",
     "./quotes/samurai.jpg",
     "./quotes/sabito.jpg"
-
-
   ];
 
   let imageIndex1 = 0;
@@ -43,6 +41,7 @@
 
 
   ];
+
 
 
   document.getElementById("dynamic-image1").addEventListener("click", function() {
@@ -73,57 +72,102 @@
 
 
   
-document.addEventListener("DOMContentLoaded", getTrendingAnime);
+  document.addEventListener("DOMContentLoaded", getTrendingAnime);
 
-async function getTrendingAnime() {
-  try {
-    const response = await fetch("https://kitsu.io/api/edge/trending/anime");
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-
-    const animeListContainer = document.getElementById("trendingHome");
-
-    const dictionary = {
-
-    };
-
-    data.data.forEach((anime, index) => {
-      const title = anime.attributes.canonicalTitle;
-      const poster = anime.attributes.posterImage.small;
-      const namee = `${index + 1}. ${title}`;
-      const img = `${poster}`;
-      dictionary[namee] = img;
-
-    });
-    function setBanner() {
-      const keys = Object.keys(dictionary);
-      let index = 0;
-    
-      function processNextKey() {
-        if (index === 10){
-          index = 0
-        }
-        if (index < keys.length) {
-          const key = keys[index];
-          const value = dictionary[key];
-          animeListContainer.innerHTML = `
-            <h4>${key}</h4>
-            <img src="${value}">
-          `;
-          index++;
-          setTimeout(processNextKey, 2500); // Delay of 2 seconds (2000 milliseconds)
-        }
+  async function getTrendingAnime() {
+    try {
+      const response = await fetch("https://kitsu.io/api/edge/trending/anime");
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
-    
-      processNextKey();
+      const data = await response.json();
+  
+      const animeListContainer = document.getElementById("trendingHome");
+  
+      const dictionary = {};
+  
+      data.data.forEach((anime, index) => {
+        const id = anime.id;
+        const title = anime.attributes.canonicalTitle;
+        const poster = anime.attributes.posterImage.small;
+        const namee = `${index + 1}. ${title}`;
+        const img = `${poster}`;
+        dictionary[namee] = {
+          id: id,
+          img: img
+        };
+      });
+  
+      animeListContainer.addEventListener("click", function(event) {
+        const target = event.target;
+        if (target.tagName === "IMG") {
+          const animeContainer = target.parentNode;
+          const animeName = animeContainer.querySelector("h4").textContent;
+          const anime = dictionary[animeName];
+          if (anime) {
+            window.location.href = "/pages/animeDetails.html?id=" + anime.id;
+          }
+        }
+      });
+  
+      function setBanner() {
+        const keys = Object.keys(dictionary);
+        let index = 0;
+  
+        function processNextKey() {
+          if (index === 10) {
+            index = 0;
+          }
+          if (index < keys.length) {
+            const key = keys[index];
+            const value = dictionary[key];
+            const newImage = new Image();
+            newImage.src = value.img;
+            newImage.onload = () => {
+              animeListContainer.innerHTML = `
+                <h4>${key}</h4>
+                <img src="${value.img}" style="opacity: 0;">
+              `;
+              fadeIn(animeListContainer.querySelector("img"), 1000);
+              index++;
+              setTimeout(processNextKey, 4000);
+            };
+          }
+        }
+  
+        processNextKey();
+      }
+  
+      function fadeIn(element, duration) {
+        let opacity = 0;
+        const interval = 10;
+        const gap = interval / duration;
+  
+        function updateOpacity() {
+          if (opacity < 1) {
+            opacity += gap;
+            element.style.opacity = opacity;
+            setTimeout(updateOpacity, interval);
+          }
+        }
+  
+        updateOpacity();
+      }
+  
+      setBanner();
+  
+    } catch (error) {
+      console.log("Error:", error.message);
     }
-    
-    setBanner();
-    
-  } catch (error) {
-    console.log("Error:", error.message);
   }
-}
 
+
+
+
+
+
+  
+  
+
+
+  

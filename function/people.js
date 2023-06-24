@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        // Process the API response data
         const people = data.data;
         totalPeople = data.meta.count;
 
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image.alt = person.attributes.name;
             image.style.objectFit = 'contain';
           } else {
-            image.src = '../img/missing.png'; // Replace with the relative path to your default image
+            image.src = '../img/missing.png';
             image.alt = 'Default Image';
           }
 
@@ -99,19 +98,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const updatePaginationButtons = () => {
     const totalPages = Math.ceil(totalPeople / peoplePerPage);
-
+  
     if (currentPage === 1) {
       prevButton.disabled = true;
     } else {
       prevButton.disabled = false;
     }
-
+  
     if (currentPage === totalPages) {
       nextButton.disabled = true;
     } else {
       nextButton.disabled = false;
     }
+  
+    const pageNumberElement = document.getElementById('pageNumber');
+    pageNumberElement.textContent = `Page ${currentPage}`;
   };
+  
 
   prevButton.addEventListener('click', () => {
     if (currentPage > 1) {

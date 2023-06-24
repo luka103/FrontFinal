@@ -19,7 +19,7 @@ body {
     text-transform: uppercase;
   }
 
-  .niggas {
+  .darkness {
     background-color: #0000009d;
     border-radius: 100px;
   }
@@ -42,7 +42,7 @@ body {
   }
   
   .box img {
-    width: 40px; /* Adjust the width as needed */
+    width: 40px;
     margin-bottom: 10px;
   }
   
@@ -89,15 +89,7 @@ body {
     font-size: 16px;
     color: #fffefe;
   }
-  @media (max-width: 768px) {
-    #mangaList {
-      justify-content: flex-start;
-    }
-  
-    .mangaItem {
-      width: 100%;
-    }
-  }
+
   .button {
     border: none;
     font-size: 17px;
@@ -176,4 +168,14 @@ body {
   
   footer a:hover{
     color: #ff0000;
+  }
+
+  @media (max-width: 768px) {
+    #mangaList {
+      justify-content: flex-start;
+    }
+  
+    .mangaItem {
+      width: 100%;
+    }
   }

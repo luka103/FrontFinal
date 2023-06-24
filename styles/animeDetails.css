@@ -24,6 +24,7 @@ html, body {
     flex-shrink: 0;
   }
   
+  
   h1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,7 +34,7 @@ html, body {
     margin-bottom: 20px;
     color: #333333;
   }
-  .niggas {
+  .darkness {
     background-color: #0000009d;
     border-radius: 100px;
   }
@@ -56,7 +57,7 @@ html, body {
   }
   
   .box img {
-    width: 40px; /* Adjust the width as needed */
+    width: 40px;
     margin-bottom: 10px;
   }
   

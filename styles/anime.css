@@ -27,9 +27,6 @@ body {
   .mt-10{
     margin-left: 10px;
   }
-  .mt-5{
-    margin-right: 5x;
-  }
   
 
   .anime-card {
@@ -50,7 +47,7 @@ body {
     align-items: center;
   }
 
-  .niggas {
+  .darkness {
     background-color: #0000009d;
     border-radius: 100px;
   }
@@ -73,7 +70,7 @@ body {
   }
   
   .box img {
-    width: 40px; /* Adjust the width as needed */
+    width: 40px; 
     margin-bottom: 10px;
   }
   
@@ -97,15 +94,7 @@ body {
     color: #fff8f8;
     font-family: 'Poppins', Arial, sans-serif;
   }
-  @media (max-width: 768px) {
-    #anime-container {
-      justify-content: flex-start;
-    }
-  
-    .anime-card {
-      width: 100%;
-    }
-  }
+
   .button {
     border: none;
     font-size: 17px;
@@ -188,5 +177,15 @@ body {
   
   footer a:hover{
     color: #ff0000;
+  }
+  
+  @media (max-width: 768px) {
+    #anime-container {
+      justify-content: flex-start;
+    }
+  
+    .anime-card {
+      width: 100%;
+    }
   }
   

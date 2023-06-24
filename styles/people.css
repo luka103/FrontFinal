@@ -18,7 +18,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.niggas {
+.darkness {
   background-color: #0000009d;
   border-radius: 100px;
 }
@@ -41,7 +41,7 @@ h1 {
 }
 
 .box img {
-  width: 40px; /* Adjust the width as needed */
+  width: 40px;
   margin-bottom: 10px;
 }
 
@@ -177,10 +177,10 @@ h1 {
   background: #caf0f8;
   font-weight: bold;;
   border-radius: 8px;
-  box-shadow: 2px 2px 0 #333,
-             2px 2px 200px #ffba08 inset;
+  box-shadow: 2px 2px 0 #333, 2px 2px 200px #ffba08 inset;
   color: #000000;
 }
+
 
 .button:active {
   transform: scale(.98);
@@ -257,3 +257,13 @@ footer a{
 footer a:hover{
   color: #ff0000;
 }
+.page-number {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+

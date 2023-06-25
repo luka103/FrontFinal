@@ -26,7 +26,7 @@ function getTopAnime() {
         animeCard.appendChild(image);
 
         animeCard.addEventListener('click', () => {
-          window.location.href = '/pages/animeDetails.html?id=' + anime.id;
+          window.location.href = '/FrontFinal/pages/animeDetails.html?id=' + anime.id;
         });
 
         animeListContainer.appendChild(animeCard);

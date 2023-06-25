@@ -33,7 +33,7 @@ function getTopAiringAnimes() {
         animeList.appendChild(animeItem);
 
         animeItem.addEventListener('click', () => {
-          window.location.href = '/pages/animeDetails.html?id=' + anime.id;
+          window.location.href = '/FrontFinal/pages/animeDetails.html?id=' + anime.id;
         });
 
         index = (index + 1) % data.data.length;

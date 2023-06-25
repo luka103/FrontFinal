@@ -32,7 +32,7 @@ async function getTopUpcomingAnime() {
       animeListContainer.appendChild(container);
 
       container.addEventListener("click", function () {
-        window.location.href = "/pages/animeDetails.html?id=" + id;
+        window.location.href = "/FrontFinal/pages/animeDetails.html?id=" + id;
       });
 
       fadeIn(animeListContainer.querySelector("img"), 1000);

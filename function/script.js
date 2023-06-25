@@ -105,7 +105,7 @@
           const animeName = animeContainer.querySelector("h4").textContent;
           const anime = dictionary[animeName];
           if (anime) {
-            window.location.href = "/pages/animeDetails.html?id=" + anime.id;
+            window.location.href = "/FrontFinal/pages/animeDetails.html?id=" + anime.id;
           }
         }
       });
